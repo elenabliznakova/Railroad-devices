@@ -32,7 +32,6 @@ class Devices extends Component {
 
 	rowExpansionTemplate(data)
 	{
-		console.log(data)
 		return (
 			<div className="p-grid p-fluid" style={{padding : '2em 1em 1em 1em'}}>
 				<div className="p-col-12 p-md-9">
@@ -44,8 +43,6 @@ class Devices extends Component {
 
 	render()
 	{
-		console.log(this.state.devices)
-
 		return (
 			<div>
                 <div className="content-section introduction">
