@@ -19,13 +19,14 @@ class Device extends Component {
 				return (
 					<li key={i}>
 						<span className="input-label"> <strong>{key}</strong></span>
-						<Button label="Show more info" icon="pi pi-external-link" onClick={(e) => this.checkDetails(key, this.list[key])}/>
+						<a className="show-label" onClick={(e) => this.checkDetails(key, this.list[key])}>Show more details</a>
 					</li>
 				)
 			} else {
 				return (
 					<li key={i}>
-						<span className="input-label"> <strong>{key}</strong>: {this.list[key]}</span>
+						<span className="input-label"> <strong>{key}</strong>:</span>
+						<span className="input-label"> {this.list[key]}</span>
 					</li>
 				)
 			}
@@ -82,11 +83,16 @@ class Device extends Component {
 	render()
 	{
 		return (
-			<div>{this.showProps}
+			<div>
+				<ul className="table-details-list">
+				{this.showProps}
+				</ul>
 				<div className="content-section implementation">
 					<Dialog header="Details" visible={this.state.visible} style={{width : '50vw'}}
 							onHide={this.onHide} maximizable>
-						{this.state.children}
+						<ul className="table-details-list">
+							{this.state.children}
+						</ul>
 					</Dialog>
 				</div>
 			</div>

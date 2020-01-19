@@ -1,15 +1,19 @@
-.Device {
-    width: 100px;
-    padding: 16px;
-    text-align: center;
-    border: 1px solid #eee;
-    box-shadow: 0 2px 3px #ccc;
-    margin: 10px;
-    box-sizing: border-box;
-    cursor: pointer;
+.table-details-list {
+  list-style : none;
 }
 
-.Device:hover,
-.Device:active {
-    background-color: #C0DDF5;
+li {
+  line-height : 1.2;
+}
+
+.input-label {
+  font-size      : 16px;
+  text-transform : uppercase;
+  padding        : 5px;
+}
+
+.show-label {
+  font-weight : bold;
+  padding     : 10px;
+  cursor      : pointer;
 }
